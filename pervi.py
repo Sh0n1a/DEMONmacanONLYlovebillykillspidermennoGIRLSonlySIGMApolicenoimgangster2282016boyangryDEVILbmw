@@ -20,7 +20,7 @@ def get_weather(city: str, api_key: str) -> dict:
         return {
             "город": data["name"],
             "температура": data["main"]["temp"],
-            "описание": data["weather"][0]["description"]
+            "описание": data["weather"][0]["description"],
         }
 
     except requests.exceptions.RequestException:
